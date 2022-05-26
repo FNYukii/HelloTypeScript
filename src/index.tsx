@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
+
+import Header from './components/Header'
 import Top from './screens/Top'
 import About from './screens/About'
 import Contact from './screens/Contact'
@@ -12,6 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path='/' element={<Top/>}/>
         <Route path='/about' element={<About/>}/>
