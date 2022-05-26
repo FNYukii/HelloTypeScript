@@ -6,8 +6,6 @@ import About from './screens/About'
 import Contact from './screens/Contact'
 import NotFound from './screens/NotFound'
 
-
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 )
