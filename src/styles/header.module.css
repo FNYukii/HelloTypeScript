@@ -1,0 +1,39 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px  #ddd;
+  padding: 16px;
+}
+
+.largeContainer {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: xx-large;
+  text-decoration: none;
+  color: #000;
+}
+
+.global-nav {
+  display: flex;
+  list-style: none;
+  margin-top: 12px;
+}
+
+.global-nav li a {
+  text-decoration: none;
+  color: #777;
+  margin-left: 32px;
+}
+
+.global-nav li .active {
+  color: #000;
+}
+
+.global-nav li a:hover {
+  color: #000;
+}
