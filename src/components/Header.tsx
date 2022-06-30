@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import {FaBars} from 'react-icons/fa'
 import '../styles/header.css'
 
 function Header() {
@@ -12,6 +13,10 @@ function Header() {
           <li><NavLink to='/about'>About</NavLink></li>
           <li><NavLink to='/contact'>Contact</NavLink></li>
         </ul>
+
+        <button className='bars-button'>
+          <FaBars className='bars'/>
+        </button>
 
       </div>
     </header>
