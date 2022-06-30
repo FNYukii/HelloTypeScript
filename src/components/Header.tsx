@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <div className='large-container'>
-        <a href='/' className='logo'>Hello React</a>
+        <a href='/' className='logo'>Hello React TS</a>
 
         <ul className='global-nav'>
           <li><NavLink to='/'>Top</NavLink></li>
