@@ -9,9 +9,9 @@ function Header() {
         <a href='/' className='logo'>Hello React TS</a>
 
         <ul className='global-nav'>
-          <li><NavLink to='/'>Top</NavLink></li>
-          <li><NavLink to='/about'>About</NavLink></li>
-          <li><NavLink to='/contact'>Contact</NavLink></li>
+          <li><NavLink to='/'>Read</NavLink></li>
+          <li><NavLink to='/read-realtime'>Read Realtime</NavLink></li>
+          <li><NavLink to='/create'>Create</NavLink></li>
         </ul>
 
         <button className='bars-button'>
