@@ -1,11 +1,11 @@
-function ContactPage() {
+function ReadScreen() {
   return (
     <main>
       <div className="large-container">
-        <h2>Contact</h2>
+        <h2>Read</h2>
       </div>
     </main>
   )
 }
 
-export default ContactPage
+export default ReadScreen

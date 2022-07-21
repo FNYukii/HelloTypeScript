@@ -5,9 +5,9 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import './styles/index.css'
 
 import Header from './components/Header'
-import TopPage from './screens/TopPage'
-import AboutPage from './screens/AboutPage'
-import ContactPage from './screens/ContactPage'
+import ReadScreen from './screens/ReadScreen'
+import ReadRealtimeScreen from './screens/ReadRealtimeScreen'
+import CreateScreen from './screens/CreateScreen'
 import NotFoundPage from './screens/NotFoundPage'
 
 const root = ReactDOM.createRoot(
@@ -18,9 +18,9 @@ root.render(
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path='/' element={<TopPage/>}/>
-        <Route path='/about' element={<AboutPage/>}/>
-        <Route path='/contact' element={<ContactPage/>}/>
+        <Route path='/' element={<ReadScreen/>}/>
+        <Route path='/read-realtime' element={<ReadRealtimeScreen/>}/>
+        <Route path='/create' element={<CreateScreen/>}/>
         <Route path='*' element={<NotFoundPage/>}/>
       </Routes>
     </BrowserRouter>
