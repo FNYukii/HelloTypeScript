@@ -25,8 +25,8 @@ function ReadScreen() {
             const id = doc.id
             const displayName = doc.data().displayName
             const userName = doc.data().userName
-            const newUser: User = { id: id, displayName: displayName, userName: userName }
-            users.push(newUser)
+            const user: User = { id: id, displayName: displayName, userName: userName }
+            users.push(user)
         });
 
         // Stateを更新
