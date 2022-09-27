@@ -4,10 +4,13 @@ import { collection, query, getDocs } from "firebase/firestore"
 import { db } from "../utilities/firebase"
 import User from '../entities/User'
 
+import progressView from '../images/progressView.svg'
+
 function ReadScreen() {
 
     // States
     const [users, setUsers] = useState<User[]>([])
+    const [isLoaded, setIsloaded] = useState(false)
 
     async function read() {
         // Usersコレクション内のドキュメントを読み取り
@@ -22,12 +25,13 @@ function ReadScreen() {
             const id = doc.id
             const displayName = doc.data().displayName
             const userName = doc.data().userName
-            const newUser: User = {id: id, displayName: displayName, userName: userName}
+            const newUser: User = { id: id, displayName: displayName, userName: userName }
             users.push(newUser)
         });
 
-        // Stateに新しいusersを更新
+        // Stateを更新
         setUsers(users)
+        setIsloaded(true)
     }
 
     useEffect(() => {
@@ -39,13 +43,19 @@ function ReadScreen() {
             <div className="large-container">
                 <h2>Read</h2>
 
-                <div>
-                    {users.map((user) => (
-                        <div key={user.id}>
-                            <p>{user.displayName}</p>
-                        </div>
-                    ))}
-                </div>
+                {!isLoaded &&
+                    <img src={progressView} alt='Progress View' />
+                }
+
+                {isLoaded &&
+                    <div className='users'>
+                        {users.map((user) => (
+                            <div key={user.id}>
+                                <p>{user.displayName}</p>
+                            </div>
+                        ))}
+                    </div>
+                }
             </div>
         </main>
     )
