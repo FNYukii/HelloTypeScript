@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import './styles/index.css'
 
@@ -11,18 +11,18 @@ import CreateScreen from './screens/CreateScreen'
 import NotFoundPage from './screens/NotFoundPage'
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 )
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Header/>
-      <Routes>
-        <Route path='/' element={<ReadScreen/>}/>
-        <Route path='/read-realtime' element={<ReadRealtimeScreen/>}/>
-        <Route path='/create' element={<CreateScreen/>}/>
-        <Route path='*' element={<NotFoundPage/>}/>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path='/' element={<ReadScreen />} />
+                <Route path='/read-realtime' element={<ReadRealtimeScreen />} />
+                <Route path='/create' element={<CreateScreen />} />
+                <Route path='*' element={<NotFoundPage />} />
+            </Routes>
+        </BrowserRouter>
+    </React.StrictMode>
 )

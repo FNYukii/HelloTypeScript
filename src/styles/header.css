@@ -1,74 +1,74 @@
 header {
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 1px  #ddd;
-  padding: 16px 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px #ddd;
+    padding: 16px 0;
 }
 
 header .large-container {
-  width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 header .logo {
-  font-size: xx-large;
-  text-decoration: none;
-  color: #000;
+    font-size: xx-large;
+    text-decoration: none;
+    color: #000;
 }
 
 header .global-nav {
-  display: flex;
-  list-style: none;
-  margin-top: 12px;
+    display: flex;
+    list-style: none;
+    margin-top: 12px;
 }
 
 header .global-nav li a {
-  text-decoration: none;
-  color: #777;
-  margin-left: 32px;
+    text-decoration: none;
+    color: #777;
+    margin-left: 32px;
 }
 
 header .global-nav li .active {
-  color: #000;
+    color: #000;
 }
 
 header .global-nav li a:hover {
-  color: #000;
+    color: #000;
 }
 
 header .bars-button {
-  margin-top: 5px;
-  cursor: pointer;
-  display: none;
-  background-color: transparent;
-  border: none;
+    margin-top: 5px;
+    cursor: pointer;
+    display: none;
+    background-color: transparent;
+    border: none;
 }
 
 header .bars-button:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 header .bars-button .bars {
-  color: #777;
-  font-size: x-large;
+    color: #777;
+    font-size: x-large;
 }
 
 @media (max-width: 1100px) {
-  header .large-container {
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+    header .large-container {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
 
 @media (max-width: 800px) {
-  header .global-nav {
-    display: none;
-  }
+    header .global-nav {
+        display: none;
+    }
 
-  header .bars-button {
-    display: block;
-  }
+    header .bars-button {
+        display: block;
+    }
 }
