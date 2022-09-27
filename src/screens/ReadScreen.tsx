@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { db } from "../utilities/firebase"
 import { collection, query, getDocs } from "firebase/firestore"
 
-
+import { db } from "../utilities/firebase"
 import User from '../entities/User'
 
 function ReadScreen() {
