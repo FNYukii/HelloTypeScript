@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { collection, query, getDocs } from "firebase/firestore"
 
 import { db } from "../utilities/firebase"
-import User from '../entities/User'
+import User from '../entitiesss/User'
 
 import progressView from '../images/progressView.svg'
 

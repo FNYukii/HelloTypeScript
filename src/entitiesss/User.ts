@@ -1,5 +1,3 @@
-import React from 'react'
-
 type User = {
     id: string
     displayName: string
