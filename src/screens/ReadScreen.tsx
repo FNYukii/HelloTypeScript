@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { collection, query, getDocs } from "firebase/firestore"
-
-import { db } from "../utilities/firebase"
+import { useEffect, useState } from 'react'
 import User from '../entities/User'
 
 import progressView from '../images/progressView.svg'
+
+import { FireUser } from '../utilities/FireUser'
 
 function ReadScreen() {
 
@@ -13,21 +12,8 @@ function ReadScreen() {
     const [isLoaded, setIsloaded] = useState(false)
 
     async function readUsers() {
-        // Usersコレクション内のドキュメントを読み取り
-        const q = query(collection(db, "users"))
-        const querySnapshot = await getDocs(q)
-
-        // 配列usersを作成
-        let users: User[] = []
-        querySnapshot.forEach((doc) => {
-            console.log(doc.id, " => ", doc.data())
-
-            const id = doc.id
-            const displayName = doc.data().displayName
-            const userName = doc.data().userName
-            const user: User = { id: id, displayName: displayName, userName: userName }
-            users.push(user)
-        });
+        // usersを読み取り
+        let users = await FireUser.readUsers()
 
         // Stateを更新
         setUsers(users)
