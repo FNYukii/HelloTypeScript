@@ -1,7 +1,6 @@
 header {
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 1px #ddd;
+    box-shadow: 0 1px #ddd3;
     padding: 16px 0;
 }
 
@@ -15,7 +14,7 @@ header .large-container {
 header .logo {
     font-size: xx-large;
     text-decoration: none;
-    color: #000;
+    color: inherit;
 }
 
 header .global-nav {
@@ -26,16 +25,16 @@ header .global-nav {
 
 header .global-nav li a {
     text-decoration: none;
-    color: #777;
+    color: gray;
     margin-left: 32px;
 }
 
 header .global-nav li .active {
-    color: #000;
+    color: inherit;
 }
 
 header .global-nav li a:hover {
-    color: #000;
+    color: inherit;
 }
 
 header .bars-button {
@@ -51,7 +50,7 @@ header .bars-button:hover {
 }
 
 header .bars-button .bars {
-    color: #777;
+    color: gray;
     font-size: x-large;
 }
 

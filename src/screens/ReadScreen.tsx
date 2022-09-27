@@ -30,7 +30,7 @@ function ReadScreen() {
                 <h2>Read</h2>
 
                 {!isLoaded &&
-                    <img src={progressView} alt='Progress View' />
+                    <img src={progressView} alt='Progress View'/>
                 }
 
                 {isLoaded &&
