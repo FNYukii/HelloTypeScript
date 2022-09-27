@@ -12,7 +12,7 @@ function ReadScreen() {
     const [users, setUsers] = useState<User[]>([])
     const [isLoaded, setIsloaded] = useState(false)
 
-    async function read() {
+    async function readUsers() {
         // Usersコレクション内のドキュメントを読み取り
         const q = query(collection(db, "users"))
         const querySnapshot = await getDocs(q)
@@ -35,7 +35,7 @@ function ReadScreen() {
     }
 
     useEffect(() => {
-        read()
+        readUsers()
     }, []);
 
     return (
