@@ -1,15 +1,39 @@
 import React, { useEffect, useState } from 'react'
-import { collection, getDocs } from "firebase/firestore"
-import db from '../utilities/Firebase'
+import { db } from "../utilities/firebase";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
-import User from '../Entities/User'
+
+import User from '../entities/User'
 
 function ReadScreen() {
 
-    const [users, setUsers] = useState<User[]>([
-        { id: "ID1", displayName: "Ayaka", userName: "Ayaka1234" },
-        { id: "ID2", displayName: "Haruto", userName: "Haru34" }
-    ])
+    // Users
+    const [users, setUsers] = useState<User[]>([]);
+
+    async function read() {
+        // 読み取り
+        const q = query(collection(db, "users"));
+        const querySnapshot = await getDocs(q);
+
+        // 配列newUsers
+        let newUsers: User[] = []
+        querySnapshot.forEach((doc) => {
+            console.log(doc.id, " => ", doc.data());
+
+            const id = doc.id
+            const displayName = doc.data().displayName
+            const userName = doc.data().userName
+            const newUser: User = {id: id, displayName: displayName, userName: userName}
+            newUsers.push(newUser)
+        });
+
+        // Stateを更新
+        setUsers(newUsers)
+    }
+
+    useEffect(() => {
+        read()
+    }, []);
 
     return (
         <main>
@@ -20,7 +44,6 @@ function ReadScreen() {
                     {users.map((user) => (
                         <div key={user.id}>
                             <p>{user.displayName}</p>
-                            <p>{user.userName}</p>
                         </div>
                     ))}
                 </div>
