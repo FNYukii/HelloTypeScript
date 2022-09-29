@@ -13,6 +13,7 @@ function ReadScreen() {
     // Styles
     const UsersCardContainer = styled.div`
         display: flex;
+        flex-wrap: wrap;
     `
 
     const UserCard = styled.div`
