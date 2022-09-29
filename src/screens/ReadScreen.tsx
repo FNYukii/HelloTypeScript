@@ -11,6 +11,17 @@ import styled from 'styled-components'
 function ReadScreen() {
 
     // Styles
+    const LargeContainer = styled.div`
+        width: 1100px;
+        margin: 0 auto;
+        padding-top: 16px;
+        @media(max-width: 1100px) {
+            width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    `
+
     const UsersCardContainer = styled.div`
         display: flex;
         flex-wrap: wrap;
@@ -46,7 +57,7 @@ function ReadScreen() {
 
     return (
         <main>
-            <div className="large-container">
+            <LargeContainer>
                 <h2>Read</h2>
 
                 {!isLoaded &&
@@ -62,7 +73,7 @@ function ReadScreen() {
                         ))}
                     </UsersCardContainer>
                 }
-            </div>
+            </LargeContainer>
         </main>
     )
 }

@@ -4,20 +4,6 @@
     box-sizing: border-box;
 }
 
-main .large-container {
-    width: 1100px;
-    margin: 0 auto;
-    padding-top: 16px;
-}
-
-@media (max-width: 1100px) {
-    main .large-container {
-        width: 100%;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
 @media (prefers-color-scheme: light) {
     body {
         background-color: white;

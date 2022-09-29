@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
-import '../styles/header.css'
-
 import styled from 'styled-components'
 
 function Header() {
