@@ -11,10 +11,12 @@ function ReadRealtimeScreen() {
     const [users, setUsers] = useState<User[]>([])
     const [isLoaded, setIsloaded] = useState(false)
 
-    async function readUsers() {
-        // リアルタイムアップデート
+    useEffect(() => {
+        // クエリを作成
         const q = query(collection(db, "users"));
-        onSnapshot(q, (querySnapshot) => {
+
+        // スナップショットリスナー実行
+        const unsub = onSnapshot(q, (querySnapshot) => {
             // Users
             let users: User[] = []
             querySnapshot.forEach((doc) => {
@@ -29,11 +31,10 @@ function ReadRealtimeScreen() {
             // Stateを更新
             setUsers(users)
             setIsloaded(true)
-        });
-    }
+        })
 
-    useEffect(() => {
-        readUsers()
+        // アンマウント時にスナップショットリスナーを停止
+        return unsub
     }, []);
 
     return (
