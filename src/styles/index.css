@@ -31,3 +31,7 @@ main .large-container {
         color: white;
     }
 }
+
+a.active {
+    color: inherit;
+}

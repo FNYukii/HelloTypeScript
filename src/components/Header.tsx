@@ -36,20 +36,15 @@ function Header() {
         list-style: none;
         margin-top: 12px;
 
-
         @media(max-width: 800px) {
             display: none;
         }
     `
 
-    const GlobalNavItem = styled(NavLink)`
+    const GlobalNavLink = styled(NavLink)`
         text-decoration: none;
         color: gray;
         margin-left: 32px;
-
-        &:active {
-            color: inherit;
-        }
         &:hover {
             color: inherit;
         }
@@ -81,9 +76,9 @@ function Header() {
                 <Logo>Hello React TS</Logo>
 
                 <GlobalNav>
-                    <li><GlobalNavItem to='/'>Read</GlobalNavItem></li>
-                    <li><GlobalNavItem to='/read-realtime'>Read Realtime</GlobalNavItem></li>
-                    <li><GlobalNavItem to='/create'>Create</GlobalNavItem></li>
+                    <li><GlobalNavLink to='/'>Read</GlobalNavLink></li>
+                    <li><GlobalNavLink to='/read-realtime'>Read Realtime</GlobalNavLink></li>
+                    <li><GlobalNavLink to='/create'>Create</GlobalNavLink></li>
                 </GlobalNav>
 
                 <BarsButton className='bars-button'>
