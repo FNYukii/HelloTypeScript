@@ -11,12 +11,6 @@ import styled from 'styled-components'
 function ReadScreen() {
 
     // Styles
-    const DetailP = styled.p`
-        font-size: 1.5em;
-        text-align: center;
-        color: palevioletred;
-    `
-
     const UsersCardContainer = styled.div`
         display: flex;
     `
