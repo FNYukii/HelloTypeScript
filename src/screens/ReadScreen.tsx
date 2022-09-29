@@ -27,6 +27,9 @@ function ReadScreen() {
         margin-right: 8px;
         margin-bottom: 8px;
         cursor: pointer;
+        &:hover {
+            opacity: 0.4;
+        }
     `
 
     // States
