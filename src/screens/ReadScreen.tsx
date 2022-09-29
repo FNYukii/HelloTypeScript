@@ -5,7 +5,17 @@ import progressView from '../images/progressView.svg'
 
 import { FireUser } from '../utilities/FireUser'
 
+import styled from 'styled-components'
+
+
 function ReadScreen() {
+
+    // Styles
+    const DetailP = styled.p`
+        font-size: 1.5em;
+        text-align: center;
+        color: palevioletred;
+    `
 
     // States
     const [users, setUsers] = useState<User[]>([])
@@ -29,8 +39,10 @@ function ReadScreen() {
             <div className="large-container">
                 <h2>Read</h2>
 
+                <DetailP>hello world</DetailP>
+
                 {!isLoaded &&
-                    <img src={progressView} alt='Progress View'/>
+                    <img src={progressView} alt='Progress View' />
                 }
 
                 {isLoaded &&
@@ -45,6 +57,9 @@ function ReadScreen() {
             </div>
         </main>
     )
+
+    
+
 }
 
 export default ReadScreen
