@@ -2,24 +2,96 @@ import { NavLink } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 import '../styles/header.css'
 
+import styled from 'styled-components'
+
 function Header() {
+
+    // Styles
+    const Root = styled.header`
+        width: 100%;
+        box-shadow: 0 1px #ddd3;
+        padding: 16px 0;
+    `
+
+    const LargeContainer = styled.div`
+        width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 1000px) {
+            width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    `
+
+    const Logo = styled.a`
+        font-size: xx-large;
+        text-decoration: none;
+        color: inherit;
+    `
+
+    const GlobalNav = styled.div`
+        display: flex;
+        list-style: none;
+        margin-top: 12px;
+
+
+        @media(max-width: 800px) {
+            display: none;
+        }
+    `
+
+    const GlobalNavItem = styled(NavLink)`
+        text-decoration: none;
+        color: gray;
+        margin-left: 32px;
+
+        &:active {
+            color: inherit;
+        }
+        &:hover {
+            color: inherit;
+        }
+    `
+
+    const BarsButton = styled.button`
+        margin-top: 5px;
+        cursor: pointer;
+        display: none;
+        background-color: transparent;
+        border: none;
+        &:hover {
+            opacity: 0.8;
+        }
+        @media(max-width: 800px) {
+            display: block;
+        }
+    `
+
+    const Bars = styled(FaBars)`
+        color: gray;
+        font-size: x-large;
+    `
+
     return (
-        <header>
-            <div className='large-container'>
-                <a href='/' className='logo'>Hello React TS</a>
 
-                <ul className='global-nav'>
-                    <li><NavLink to='/'>Read</NavLink></li>
-                    <li><NavLink to='/read-realtime'>Read Realtime</NavLink></li>
-                    <li><NavLink to='/create'>Create</NavLink></li>
-                </ul>
+        <Root>
+            <LargeContainer>
+                <Logo>Hello React TS</Logo>
 
-                <button className='bars-button'>
-                    <FaBars className='bars' />
-                </button>
+                <GlobalNav>
+                    <li><GlobalNavItem to='/'>Read</GlobalNavItem></li>
+                    <li><GlobalNavItem to='/read-realtime'>Read Realtime</GlobalNavItem></li>
+                    <li><GlobalNavItem to='/create'>Create</GlobalNavItem></li>
+                </GlobalNav>
 
-            </div>
-        </header>
+                <BarsButton className='bars-button'>
+                    <Bars className='bars' />
+                </BarsButton>
+
+            </LargeContainer>
+        </Root>
     )
 }
 
