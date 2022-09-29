@@ -17,6 +17,18 @@ function ReadScreen() {
         color: palevioletred;
     `
 
+    const UsersCardContainer = styled.div`
+        display: flex;
+    `
+
+    const UserCard = styled.div`
+        border: 1px solid black;
+        padding: 16px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+    `
+
     // States
     const [users, setUsers] = useState<User[]>([])
     const [isLoaded, setIsloaded] = useState(false)
@@ -39,27 +51,22 @@ function ReadScreen() {
             <div className="large-container">
                 <h2>Read</h2>
 
-                <DetailP>hello world</DetailP>
-
                 {!isLoaded &&
                     <img src={progressView} alt='Progress View' />
                 }
 
                 {isLoaded &&
-                    <div className='users'>
+                    <UsersCardContainer>
                         {users.map((user) => (
-                            <div key={user.id}>
+                            <UserCard key={user.id}>
                                 <p>{user.displayName}</p>
-                            </div>
+                            </UserCard>
                         ))}
-                    </div>
+                    </UsersCardContainer>
                 }
             </div>
         </main>
     )
-
-    
-
 }
 
 export default ReadScreen
