@@ -25,9 +25,6 @@ function ReadScreen() {
         &:hover {
             opacity: 0.4;
         }
-        @media (min-width: 1000px) {
-            color: red;
-        }
     `
 
     // States
