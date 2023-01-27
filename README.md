@@ -4,4 +4,4 @@
 - TypeScript
 - React
 - Styled Components
-- Firebase
+- Firebase 9
