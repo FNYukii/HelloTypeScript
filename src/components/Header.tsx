@@ -71,7 +71,7 @@ function Header() {
 
         <Root>
             <LargeContainer>
-                <Logo>Hello React TS</Logo>
+                <Logo>Hello TypeScript</Logo>
 
                 <GlobalNav>
                     <li><GlobalNavLink to='/'>Read</GlobalNavLink></li>
